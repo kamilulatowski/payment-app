@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "taxRate",
+      "type": "java.lang.String",
+      "description": "Value of taxRate [%]."
+  }
+] }
