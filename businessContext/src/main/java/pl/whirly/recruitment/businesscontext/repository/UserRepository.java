@@ -7,6 +7,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class UserRepository {
@@ -20,5 +21,26 @@ public class UserRepository {
    public User getUserById(String id) {
       return this.users.stream().filter(user -> user.getId().equals(id)).findFirst().orElse(null);
    }
+
+    public List<User> getAllUsers() {
+        return this.users;
+    }
+
+    public boolean addUser(User user) {
+        return users.add(user);
+    }
+
+    public boolean updateUser(String id, User user) {
+       User updatedUser = getUserById(id);
+       if (updatedUser == null) {
+           throw new NoSuchElementException();
+       }
+       users.remove(updatedUser);
+       return users.add(user);
+    }
+
+    public boolean delete(String id) {
+        return this.users.removeIf(element -> element.getId().equals(id));
+    }
 }
 

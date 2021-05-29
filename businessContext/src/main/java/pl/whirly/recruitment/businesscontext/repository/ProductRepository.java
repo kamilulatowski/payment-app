@@ -6,6 +6,7 @@ import pl.whirly.recruitment.businesscontext.model.Product;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class ProductRepository {
@@ -29,16 +30,15 @@ public class ProductRepository {
    }
 
    public boolean updateProduct(String id, Product product) {
-      Product tempProduct = getProductById(id);
-      if (tempProduct != null) {
-         products.remove(tempProduct);
-         tempProduct = product;
-         return products.add(tempProduct);
+      Product updatedProduct = getProductById(id);
+      if (updatedProduct == null) {
+         throw new NoSuchElementException();
       }
-      return false;
+      products.remove(updatedProduct);
+      return products.add(product);
    }
 
    public boolean delete(String productId) {
-      return products.removeIf(p -> p.getId().equals(productId));
+      return this.products.removeIf(p -> p.getId().equals(productId));
    }
 }
