@@ -19,4 +19,26 @@ public class ProductRepository {
    public Product getProductById(String id) {
       return this.products.stream().filter(product -> product.getId().equals(id)).findFirst().orElse(null);
    }
+
+   public List<Product> getAllProducts() {
+      return this.products;
+   }
+
+   public boolean addProduct(Product product) {
+      return this.products.add(product);
+   }
+
+   public boolean updateProduct(String id, Product product) {
+      Product tempProduct = getProductById(id);
+      if (tempProduct != null) {
+         products.remove(tempProduct);
+         tempProduct = product;
+         return products.add(tempProduct);
+      }
+      return false;
+   }
+
+   public boolean delete(String productId) {
+      return products.removeIf(p -> p.getId().equals(productId));
+   }
 }
