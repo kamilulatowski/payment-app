@@ -29,7 +29,7 @@ public class PaymentController {
    }
 
    @PostMapping
-   public void processPayment(Payment payment) {
+   public void processPayment(@RequestBody Payment payment) {
       paymentService.processPayment(payment);
    }
 
