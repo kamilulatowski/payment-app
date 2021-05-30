@@ -19,6 +19,7 @@ public class UserContextClientImpl implements UserContextClient{
    @Override
    public User getUserById(String userId) {
       if (userId == null || userId.isBlank()) {
+         System.out.println("Błędne id użytkownika");
          throw new NoSuchElementException();
       }
       UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(userServiceUrl).pathSegment(userId);
