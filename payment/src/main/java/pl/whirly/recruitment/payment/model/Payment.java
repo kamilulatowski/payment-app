@@ -8,6 +8,15 @@ public class Payment {
    private String userId;
    private String productId;
    private double amountGross;
+   private String currency;
+
+   public String getCurrency() {
+      return currency;
+   }
+
+   public void setCurrency(String currency) {
+      this.currency = currency;
+   }
 
    public String getId() {
       return id;

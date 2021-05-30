@@ -20,6 +20,7 @@ public class UserContextClientImpl implements UserContextClient{
 
    @Override
    public UserDto getUserById(String userId) {
+      userId = "kid";
       if (userId == null || userId.isBlank()) {
          throw new NoSuchElementException();
       }

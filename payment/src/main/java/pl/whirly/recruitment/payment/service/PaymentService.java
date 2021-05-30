@@ -7,6 +7,7 @@ import pl.whirly.recruitment.payment.client.ChargeClient;
 import pl.whirly.recruitment.payment.client.UserContextClient;
 import pl.whirly.recruitment.payment.model.Payment;
 import pl.whirly.recruitment.payment.model.User;
+import pl.whirly.recruitment.payment.model.UserDto;
 
 @Service
 public class PaymentService {
