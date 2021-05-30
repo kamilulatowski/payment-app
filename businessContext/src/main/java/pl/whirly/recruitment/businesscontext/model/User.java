@@ -3,9 +3,10 @@ package pl.whirly.recruitment.businesscontext.model;
 import java.time.Instant;
 
 public class User {
-   String id;
-   Instant birthDate;
-   String locationCode;
+
+   private String id;
+   private Instant birthDate;
+   private String locationCode;
 
    public User(String id, Instant birthDate, String locationCode) {
       this.id = id;

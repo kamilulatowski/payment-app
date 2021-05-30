@@ -3,10 +3,11 @@ package pl.whirly.recruitment.payment.model;
 import java.util.Random;
 
 public class Payment {
-   String id;
-   String userId;
-   String productId;
-   double amountGross;
+
+   private String id;
+   private String userId;
+   private String productId;
+   private double amountGross;
 
    public String getId() {
       return id;
