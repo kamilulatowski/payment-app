@@ -1,13 +1,51 @@
 package pl.whirly.recruitment.payment.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public class User {
-   String userId;
 
+   private String userId;
+   private String firstName;
+   private String lastName;
+   private int age;
+
+   public User() {
+   }
+
+   public User(String userId, String firstName, String lastName, int age) {
+      this.userId = userId;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+   }
+
+   public String getUserId() {
+      return userId;
+   }
+
+   public void setUserId(String userId) {
+      this.userId = userId;
+   }
+
+   public String getFirstName() {
+      return firstName;
+   }
+
+   public void setFirstName(String firstName) {
+      this.firstName = firstName;
+   }
+
+   public String getLastName() {
+      return lastName;
+   }
+
+   public void setLastName(String lastName) {
+      this.lastName = lastName;
+   }
+
+   public int getAge() {
+      return age;
+   }
+
+   public void setAge(int age) {
+      this.age = age;
+   }
 }

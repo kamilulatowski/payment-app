@@ -3,10 +3,11 @@ package pl.whirly.recruitment.charge.model;
 import java.math.BigDecimal;
 
 public class ChargeOrder {
-   String id;
-   String userId;
-   BigDecimal amountNet;
-   String currency;
+
+   private String id;
+   private String userId;
+   private BigDecimal amountNet;
+   private String currency;
 
    public ChargeOrder(String userId, BigDecimal amountNet, String currency) {
       this.userId = userId;

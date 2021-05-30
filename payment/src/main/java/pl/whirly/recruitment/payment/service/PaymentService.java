@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import pl.whirly.recruitment.payment.client.ChargeClient;
 import pl.whirly.recruitment.payment.client.UserContextClient;
 import pl.whirly.recruitment.payment.model.Payment;
+import pl.whirly.recruitment.payment.model.User;
 
 @Service
 public class PaymentService {

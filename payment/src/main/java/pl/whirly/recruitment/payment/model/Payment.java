@@ -1,19 +1,44 @@
 package pl.whirly.recruitment.payment.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.util.Random;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public class Payment {
    String id;
    String userId;
    String productId;
    double amountGross;
+
+   public String getId() {
+      return id;
+   }
+
+   public void setId(String id) {
+      this.id = id;
+   }
+
+   public String getUserId() {
+      return userId;
+   }
+
+   public void setUserId(String userId) {
+      this.userId = userId;
+   }
+
+   public String getProductId() {
+      return productId;
+   }
+
+   public void setProductId(String productId) {
+      this.productId = productId;
+   }
+
+   public double getAmountGross() {
+      return amountGross;
+   }
+
+   public void setAmountGross(double amountGross) {
+      this.amountGross = amountGross;
+   }
 
    @Override
    public int hashCode() {
