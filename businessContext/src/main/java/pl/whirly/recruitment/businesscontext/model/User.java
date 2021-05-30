@@ -1,40 +1,17 @@
 package pl.whirly.recruitment.businesscontext.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.Instant;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class User {
 
    private String id;
    private Instant birthDate;
    private String locationCode;
-
-   public User(String id, Instant birthDate, String locationCode) {
-      this.id = id;
-      this.birthDate = birthDate;
-      this.locationCode = locationCode;
-   }
-
-   public String getId() {
-      return id;
-   }
-
-   public void setId(String id) {
-      this.id = id;
-   }
-
-   public Instant getBirthDate() {
-      return birthDate;
-   }
-
-   public void setBirthDate(Instant birthDate) {
-      this.birthDate = birthDate;
-   }
-
-   public String getLocationCode() {
-      return locationCode;
-   }
-
-   public void setLocationCode(String locationCode) {
-      this.locationCode = locationCode;
-   }
 }

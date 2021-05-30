@@ -2,17 +2,11 @@ package pl.whirly.recruitment.payment.client;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
-import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 import pl.whirly.recruitment.payment.model.Payment;
-import pl.whirly.recruitment.payment.model.User;
-
-import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 
 @Service
 @Profile("!disable-user-context-client")

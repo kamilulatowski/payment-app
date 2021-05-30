@@ -1,8 +1,8 @@
 package pl.whirly.recruitment.payment.client;
 
-import pl.whirly.recruitment.payment.model.UserDto;
+import pl.whirly.recruitment.payment.model.User;
 
 public interface UserContextClient {
 
-   UserDto getUserById(String userId);
+   User getUserById(String userId);
 }
